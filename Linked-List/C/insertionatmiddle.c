@@ -59,7 +59,7 @@ int main()
         if (temp->next != NULL)
         {
             temp = temp->next;
-            //Ei jinish naki abar bujhena ami bujhaile! 
+            
         }
     }
     newNode->next = temp->next;
