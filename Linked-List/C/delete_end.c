@@ -1,4 +1,4 @@
-// Linked list insertion at begining in C
+// Linked list delete at end in C
 
 #include <stdio.h>
 #include <stdlib.h>
