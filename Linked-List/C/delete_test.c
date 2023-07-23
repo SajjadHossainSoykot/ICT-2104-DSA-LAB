@@ -91,8 +91,8 @@ int main() {
     printf("Linked list after deleting the 5th node: ");
     printLinkedList(head);
 
-    // Delete the prev 9th node (index 7)
-    deleteNode(&head, 7);
+    // Delete the 9th node (index 8)
+    deleteNode(&head, 8);
     printf("Linked list after deleting the 9th node: ");
     printLinkedList(head);
 
