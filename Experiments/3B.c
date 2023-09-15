@@ -21,9 +21,9 @@ int main()
         return 1;
     }
 
-    ptr->id = 101;
+    ptr->id = 101; //Pointer using arrow operator
     strcpy(ptr->name, "Sajjad Hossain");
-    ptr->gpa = 4.00;
+    (*ptr).gpa = 4.00; //Pointer using dot operator
 
     printf("Student Data:\n");
     printf("ID: %d\n", ptr->id);

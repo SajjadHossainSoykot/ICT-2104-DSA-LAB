@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-void printArray(int arr[], int n)
+void printArray(int *ptr, int n)
 {
     for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
+        printf("%d ", *(ptr+i));
     }
     printf("\n");
 }
@@ -14,14 +14,14 @@ int main() {
     int *ptr = arr; // Declare a pointer and assign the array's address
 
     printf("Original Array: ");
-    printArray(arr,n);
+    printArray(arr,n); 
 
     // Use the pointer to modify elements in the array
     ptr[1] = 99;
     ptr[3] = 77;
 
     printf("Modified Array: ");
-    printArray(arr,n);
+    printArray(ptr,n); //Using Pointer to print array
 
     return 0;
 }
