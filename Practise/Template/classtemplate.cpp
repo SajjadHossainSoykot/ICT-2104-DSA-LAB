@@ -8,7 +8,7 @@ private:
 
 public:
     adder() : result(0) {}
-    void add(int a, int b)
+    void add(T a, T b)
     {
         result = a+b;
     }
