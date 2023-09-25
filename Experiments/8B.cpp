@@ -17,6 +17,12 @@ bool isFull(Node *root)
         return true; // An empty tree is a full binary tree
     }
 
+    // If both subtrees are null, it's a leaf node and considered full
+    if (root->left == nullptr && root->right == nullptr)
+    {
+        return true;
+    }
+
     // If both subtrees exist, recursively check if they are full binary trees
     if (root->left != nullptr && root->right != nullptr)
     {
@@ -26,6 +32,8 @@ bool isFull(Node *root)
     // If either subtree is null, return false
     return false;
 }
+
+
 
 int height(Node *root)
 {
@@ -65,8 +73,8 @@ int main()
     bool Full = isFull(root);
     bool Perfect = isPerfect(root);
 
-    cout << "Is it a full binary tree? " << (isFull ? "Yes" : "No") << endl;
-    cout << "Is it a perfect binary tree? " << (isPerfect ? "Yes" : "No") << endl;
+    cout << "Is it a full binary tree? " << (Full ? "Yes" : "No") << endl;
+    cout << "Is it a perfect binary tree? " << (Perfect ? "Yes" : "No") << endl;
 
     return 0;
 }
