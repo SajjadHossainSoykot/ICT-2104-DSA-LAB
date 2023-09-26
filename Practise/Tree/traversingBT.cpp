@@ -5,12 +5,12 @@ struct node
     int data;
     node *left;
     node *right;
-    node(int val) : data(val), left(nullptr), right(nullptr) {}
+    node(int val) : data(val), left(NULL), right(NULL) {}
 };
 
 node *insert(node *root, int value)
 {
-    if (root == nullptr)
+    if (root == NULL)
     {
         return new node(value);
     }
@@ -24,8 +24,9 @@ node *insert(node *root, int value)
 
 void preorder(node *root)
 {
-    if (root == nullptr)
+    if (root == NULL)
         return;
+    
     cout << root->data << " ";
     preorder(root->left);
     preorder(root->right);
@@ -33,7 +34,7 @@ void preorder(node *root)
 
 void inorder(node *root)
 {
-    if (root == nullptr)
+    if (root == NULL)
         return;
     inorder(root->left);
     cout << root->data << " ";
@@ -42,7 +43,7 @@ void inorder(node *root)
 
 void postorder(node *root)
 {
-    if (root == nullptr)
+    if (root == NULL)
         return;
     postorder(root->left);
     postorder(root->right);
@@ -51,14 +52,16 @@ void postorder(node *root)
 
 int main()
 {   
-    node *root = nullptr;
-    root = insert(root, 5);
-    insert(root, 3);
-    insert(root, 8);
-    insert(root, 1);
-    insert(root, 4);
-    insert(root, 7);
-    insert(root, 9);
+    node *root = NULL;
+    while (true)
+    {
+        cout<<"Insert Value (0 to stop):";
+        int value;
+        cin>>value;
+        if(value==0)break;
+        root=insert(root,value);
+    }
+    
 
     cout<<"Preorder: ";
     preorder(root);
