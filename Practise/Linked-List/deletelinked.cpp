@@ -1,5 +1,3 @@
-//Hi Shundori! Sob delete koro keno haee??
-
 #include <iostream>
 using namespace std;
 struct node
